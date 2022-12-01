@@ -1,3 +1,5 @@
+NOT MAINTAINED anymore!!!
+
 # Fork
 
 This is a fork of https://github.com/pfalcon/esp-open-sdk
