@@ -8,8 +8,8 @@ index c53d78a9..8886f7ad 100644
  do_isl_get() {
 -    CT_GetFile "isl-${CT_ISL_VERSION}" \
 -        https://libisl.sourceforge.io/
-+    CT_GetFile "isl-${CT_ISL_VERSION}" ".tar.gz" \
-+        https://github.com/Meinersbur/isl/archive/refs/tags
++    CT_GetFile "isl-${CT_ISL_VERSION}" \
++        http://gcc.gnu.org/pub/gcc/infrastructure
  }
  
  # Extract ISL
