@@ -20,10 +20,7 @@ USER sdk
 WORKDIR /home/sdk
 
 # Build the SDK.
-RUN (cd esp-open-sdk && make)
-
-# remove stuff which is not needed anymore to make the image a bit smaller
-RUN (cd esp-open-sdk && rm -rf crosstool-NG && rm -rf esp-open-lwip && rm -rf lx106-hal && rm -rf esptool)
+RUN (cd esp-open-sdk && make toolchain esptool libhal STANDALONE=n)
 
 # Add toolchain to PATH
 ENV PATH="${PATH}:/home/sdk/esp-open-sdk/xtensa-lx106-elf/bin/"

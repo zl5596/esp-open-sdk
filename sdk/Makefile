@@ -155,6 +155,8 @@ _toolchain:
 crosstool-NG: crosstool-NG/ct-ng
 
 crosstool-NG/ct-ng: crosstool-NG/bootstrap
+	test -s crosstool-NG/scripts/build/companion_libs/121-isl.sh.orig || $(PATCH) -p1 -i ../fix-isl-url.patch -d crosstool-NG/
+	test -s crosstool-NG/scripts/build/companion_libs/210-expat.sh.orig || $(PATCH) -p1 -i ../fix-expat-url.patch -d crosstool-NG/
 	$(MAKE) -C crosstool-NG -f ../Makefile _ct-ng
 
 _ct-ng:

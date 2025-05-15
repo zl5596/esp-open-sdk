@@ -1,0 +1,15 @@
+diff --git a/scripts/build/companion_libs/210-expat.sh b/scripts/build/companion_libs/210-expat.sh
+index 304482cd..eb6e1114 100644
+--- a/scripts/build/companion_libs/210-expat.sh
++++ b/scripts/build/companion_libs/210-expat.sh
+@@ -9,8 +9,8 @@ do_expat_for_target() { :; }
+ if [ "${CT_EXPAT_TARGET}" = "y" -o "${CT_EXPAT}" = "y" ]; then
+ 
+ do_expat_get() {
+-    CT_GetFile "expat-${CT_EXPAT_VERSION}" .tar.gz    \
+-               http://downloads.sourceforge.net/project/expat/expat/${CT_EXPAT_VERSION}
++    CT_GetFile "expat-${CT_EXPAT_VERSION}" .tar.gz \
++        https://github.com/libexpat/libexpat/releases/download/R_"$(echo "$CT_EXPAT_VERSION" | tr '.' '_')"
+ }
+ 
+ do_expat_extract() {
